@@ -1,0 +1,19 @@
+<mat-card class="example-card">
+  <div class="card-image-container">
+    <img mat-card-image [src]="loveMatch.pic" alt="Photo of a Shiba Inu" class="img-pic">
+    <h3 class="card-name">{{ loveMatch.name }} , {{ loveMatch.age }}</h3>
+    <h2 *ngIf="loveMatch.likes > 10" class="card-match">Match</h2>
+    <div class="emoji-container">
+      <img src="assets/images/emoji.png" alt="Emoji" class="emoji-top" *ngFor="let emoji of emojisTop">
+      <img src="assets/images/emoji.png" alt="Emoji" class="emoji-bottom" *ngFor="let emoji of emojisBottom">
+    </div>
+  </div>
+  <div class="actions">
+    <mat-icon class="like-icon" (click)="onLike()" [ngStyle]="{color: buttonColor}">favorite</mat-icon> {{ loveMatch.likes }}
+    <!-- <img src="assets/images/icone-like.png" (click)="onLike()" /> {{card.likes}} -->
+    <div class="icons">
+      <mat-icon (click)="openModalProfile()">person</mat-icon>
+      <mat-icon (click)="onShare()">share</mat-icon>
+    </div>
+  </div>
+</mat-card>

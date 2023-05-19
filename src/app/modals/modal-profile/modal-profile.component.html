@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="icon-fechar">
+      <mat-icon (click)="close()">close</mat-icon>
+    </div>
+    <div class="img-align">
+      <img [src]="matchLove.pic" alt="perfil de foto" class="img-profile"/>
+    </div>
+    <h2 class="titulo-perfil">{{ matchLove.name }} , {{ matchLove.age }}</h2>
+    <div class="icons-work">
+      <mat-icon>work</mat-icon>
+      <span>{{ matchLove.work }}</span>
+    </div>
+    <div class="icons-location">
+      <mat-icon>location_on</mat-icon>
+      <span>{{ matchLove.locale }}</span>
+    </div>
+    <p class="text-description">{{ matchLove.description }}</p>
+  </div>
+  

@@ -1,0 +1,6 @@
+<div fxLayout="row wrap" fxLayout.xs="column" fxLayoutAlign="center">
+  <app-loading-love *ngIf="loadingLoveService.isLoading"></app-loading-love>
+    <div fxFlex="33" fxFlex.md="40" fxFlex.xs="100" *ngFor="let loveMatchs of matchCards" class="card-wrapper">
+      <app-card-match-love [loveMatch]="loveMatchs"></app-card-match-love>
+    </div>
+  </div>
